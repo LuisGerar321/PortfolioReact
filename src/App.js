@@ -193,11 +193,16 @@ function App() {
           </ul>
 
         </div>
-
-
-
-
       </section>
+
+
+      <section id = "Experience" className =  "ExperienceContainer">
+        <div className =  "TagBar">
+          <h1>Experience</h1>
+        </div>
+      </section>
+
+      
 
       <section id = "ProgrammingLevel" className =  "ProgrammingLanguageContainer">
         
