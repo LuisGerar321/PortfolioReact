@@ -12,6 +12,9 @@ import EngLevel from "./EnglishLevelLenguage.PNG";
 import SpaLevel from "./SpanishLevelLenguage.PNG";
 import ProgLevel from "./ProgSkills.PNG";
 
+import Barra from  "./shared/organims/Barra";
+
+
 import { Anchor } from 'antd';
 
 const { Link } = Anchor;
@@ -20,7 +23,7 @@ const { Link } = Anchor;
 
 
 function App() {
-  const title_ =  "Resume";
+  const title_ =  "Luis Gerardo";
   const name =  "Luis Gerardo";
   const lastNAme = "Camara Salinas";
 
@@ -39,6 +42,19 @@ function App() {
     color: "#000000",
     transition: "0.3s",
   }
+  
+  const progSkill =  [
+    {tag:  "Cpp",  value : 60,   },
+    {tag:  "C",  value : 60,   },
+    {tag:  "Python",  value : 60,   },
+    {tag:  "JavaScript",  value : 60,   },
+    {tag:  "Matlab",  value : 40,   },
+    {tag:  "Css",  value : 30,   },
+    {tag:  "HTML",  value : 30,   },
+    {tag:  "C#",  value : 20,   },
+  ]
+
+
   return (
     <div className="App">
       <div  className = "menu-box" >
@@ -49,7 +65,7 @@ function App() {
         <h1 className = "name-user"> {title_} </h1>
 
         <Anchor >
-        <Link  href="#Profile" title="Profile" ></Link>  
+        <Link  className = "btn-home" href="#Profile" title="Profile" ></Link>  
       
         </Anchor>
 
@@ -70,7 +86,9 @@ function App() {
           <Link  className = "btn-home" href="#ProgrammingLevel" title="ProgrammingLevel" />
         </Anchor>
 
-
+        <Anchor>
+          <Link  className = "btn-home" href="#Experience" title="Experience" />
+        </Anchor>
         {/* <a href="#Profile"> <button className  = "btn-home btn1" >Profile</button>    </a>
         
         <button href="#Education" className  = "btn-home btn1" >Education</button>  
@@ -164,7 +182,7 @@ function App() {
 
       </section>
 
-      <section id ="skills " className =  "ProfileContainer">
+      <section id ="skills " className =  "SkillsContainer">
         <div className = "TagLeftandRow">
           <div className =  "TagBar"><h1>Skills</h1>  </div>
           <div className =  "TagBarR"><h1>Interests</h1></div>      
@@ -195,33 +213,88 @@ function App() {
         </div>
       </section>
 
-
-      <section id = "Experience" className =  "ExperienceContainer">
-        <div className =  "TagBar">
-          <h1>Experience</h1>
-        </div>
-      </section>
-
-      
-
       <section id = "ProgrammingLevel" className =  "ProgrammingLanguageContainer">
         
         <div className =  "TagBar">
           <h1>Programming Language</h1>
         </div>
 
-        <img src= {ProgLevel} className= "ProgrammingSkillsPicture" />
+        <div className = "Graph">
+          <Barra  tag  =  {progSkill[0].tag  } value = {progSkill[0].value}   ></Barra>
+          <Barra  tag  =  {progSkill[1].tag  } value = {progSkill[1].value}   ></Barra>
+          <Barra  tag  =  {progSkill[2].tag  } value = {progSkill[2].value}   ></Barra>
+          <Barra  tag  =  {progSkill[3].tag  } value = {progSkill[3].value}   ></Barra>
+          <Barra  tag  =  {progSkill[4].tag  } value = {progSkill[4].value}   ></Barra>
+          <Barra  tag  =  {progSkill[5].tag  } value = {progSkill[5].value}   ></Barra>
+          <Barra  tag  =  {progSkill[6].tag  } value = {progSkill[6].value}   ></Barra>
+          <Barra  tag  =  {progSkill[7].tag  } value = {progSkill[7].value}   ></Barra>
+        </div>
 
+
+
+      </section>
+
+      <section id = "Experience" className =  "ExperienceContainer">
+        <div className =  "TagBar">
+          <h1>Experience</h1>
+        </div>
+
+        <div className = "InterAcademic" >
+
+          <div className =  "TagBar">
+            <h1>Intership and Academic</h1>
+          </div>
+
+          <div className = "ExperienceItem">
+            <div className = "icon"></div>
+            <div className = "info">
+              <h1>Scholar internship I (Plenumsoft) 4th quarter</h1>
+              <p>Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.</p>
+            </div>
+          </div>
+
+
+          <div className = "ExperienceItem">
+            <div className = "icon"></div>
+            <div className = "info">
+              <h1>Freelancer experience as a teacher in Teams platform since May 2020</h1>
+              <p>
+              · Designed and taught four full courses in programing microcontrollers to 
+                UPY students.
+              · Designed and taught two full courses and modular extracurricular class 
+                in general programing and Data structures in C and Python.
+              · Designed and taught three courses in Real Time operating system 
+                (ROS) in C++ and Python language to UPY students.
+              · Experience teaching some students of Computational Robotics (7,8 and 
+                quarter), Embedded System (6 quarter), and Data Engineering (2, 3 quarter).
+              </p>
+            </div>
+          </div>
+
+
+
+          <div className = "ExperienceItem">
+            <div className = "icon"></div>
+            <div className = "info">
+              <h1>Intership (INAOE) 10th quarter</h1>
+              <p>
+              Developed robotic software in C++ programming language for a service 
+              robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (Puebla) with the purpose of doing future 
+              research in this robotic field.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div className =  ""></div>
 
       </section>
 
 
     </div>
-
-
-
-
-
     
   );
 
