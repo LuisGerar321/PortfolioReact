@@ -11,11 +11,13 @@ import Icon from "./Icon.png";
 import EngLevel from "./EnglishLevelLenguage.PNG";
 import SpaLevel from "./SpanishLevelLenguage.PNG";
 import ProgLevel from "./ProgSkills.PNG";
+import Markovito from "./MarkovitoJr.jpg";
+import DataDistik from "./DataDistik.png";
+import Programming from "./ProgrammingIllustration.png"
 
 import Barra from  "./shared/organims/Barra";
-
-
 import { Anchor } from 'antd';
+
 
 const { Link } = Anchor;
 
@@ -246,7 +248,9 @@ function App() {
           </div>
 
           <div className = "ExperienceItem">
-            <div className = "icon"></div>
+            <div className = "icon">
+              <img  clasName = "image" src={DataDistik} alt=""/>
+            </div>
             <div className = "info">
               <h1>Scholar internship I (Plenumsoft) 4th quarter</h1>
               <p>Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.</p>
@@ -255,26 +259,47 @@ function App() {
 
 
           <div className = "ExperienceItem">
-            <div className = "icon"></div>
-            <div className = "info">
+            <div className = "icon" style = {{height:"40%",}}>
+              <img  clasName = "image" src={Programming} alt=""/>
+
+            </div>
+            <div className = "info" >
               <h1>Freelancer experience as a teacher in Teams platform since May 2020</h1>
-              <p>
-              · Designed and taught four full courses in programing microcontrollers to 
-                UPY students.
-              · Designed and taught two full courses and modular extracurricular class 
-                in general programing and Data structures in C and Python.
-              · Designed and taught three courses in Real Time operating system 
-                (ROS) in C++ and Python language to UPY students.
-              · Experience teaching some students of Computational Robotics (7,8 and 
-                quarter), Embedded System (6 quarter), and Data Engineering (2, 3 quarter).
-              </p>
+                <ul>
+                  <li>
+                    <p>Designed and taught four full courses in programing microcontrollers to 
+                        UPY students.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        Designed and taught two full courses and modular extracurricular class 
+                        in general programing and Data structures in C and Python.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Designed and taught three courses in Real Time operating system 
+                      (ROS) in C++ and Python language to UPY students.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Experience teaching some students of Computational Robotics (7,8 and 
+                      quarter), Embedded System (6 quarter), and Data Engineering (2, 3 quarter).
+                    </p>
+                  </li>
+                </ul>
             </div>
           </div>
 
 
 
           <div className = "ExperienceItem">
-            <div className = "icon"></div>
+            <div className = "icon">
+              <img  clasName = "image" src={Markovito} alt=""/>
+            </div>
             <div className = "info">
               <h1>Intership (INAOE) 10th quarter</h1>
               <p>

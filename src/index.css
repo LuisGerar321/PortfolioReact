@@ -1,3 +1,6 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
 .App {
   display: flex;
   flex-direction: column;
@@ -180,14 +183,34 @@ section {
 }
 
 
-.TagBar h1{
-  font-family: Arial;
+/* .TagBar h1{
+  font-family:Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 2vw;
   justify-content: center;
   align-self: center;
+  font-weight: bolder;
+  color: #6e8596;
 
+} */
+
+p {
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: justify;
+  padding-top: 1.3rem;
+}
+
+h1{
+  font-family:Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  justify-content: center;
+  align-self: center;
+  font-weight: bolder;
+  color: #6e8596;
 }
 
 .TagBarR h1{
@@ -333,10 +356,12 @@ section {
 }
 
 .ExperienceContainer{
-  border: 1px solid green;
+  border: 1px solid rgb(243, 4, 56);
+  height: 2500px;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  flex-direction: column;
 }
 .SkillsContainer{
   align-self: stretch;
@@ -385,11 +410,19 @@ img {
 .ExperienceItem{
   margin: 40px;
   width:  auto;
-  height:  300px;
+  height:  auto;
   /* border: 1px solid blu  e; */
   display: flex;
   justify-content: flex-start;
   background-color: rgba(160, 160, 160, 0.062);
   border-radius: 1rem;
   box-shadow: 0px 4px 8px rgba(168, 173, 173, 0.322);
+}
+.ExperienceItem p{
+  font-size: 1.2rem;
+  margin: 0%;
+  padding: 20px;
+}
+.ExperienceItem .icon{
+  align-self: center;
 }
