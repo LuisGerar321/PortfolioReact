@@ -357,7 +357,7 @@ h1{
 
 .ExperienceContainer{
   border: 1px solid rgb(243, 4, 56);
-  height: 2500px;
+  height: 4500px;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
@@ -425,4 +425,20 @@ img {
 }
 .ExperienceItem .icon{
   align-self: center;
+}
+
+.NoteStyle  {
+  margin: 40px;
+  width:  auto;
+  height:  auto;
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgba(160, 160, 160, 0.062);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 8px rgba(168, 173, 173, 0.322);
+  transition: all 0.3s ease-in-out;
+}
+
+.NoteStyle:hover  {
+  transform: scale(1.01)
 }
