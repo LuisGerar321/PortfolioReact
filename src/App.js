@@ -14,6 +14,11 @@ import ProgLevel from "./ProgSkills.PNG";
 import Markovito from "./MarkovitoJr.jpg";
 import DataDistik from "./DataDistik.png";
 import Programming from "./ProgrammingIllustration.png"
+import Note from "./shared/organims/Note"
+import Micro from "./Micro.jpg"
+import Tiago from "./tiago.jpg"
+import Motor from "./ControlMotor.JPG"
+import Car from "./carCounterHD.JPG"
 
 import Barra from  "./shared/organims/Barra";
 import { Anchor } from 'antd';
@@ -247,74 +252,63 @@ function App() {
             <h1>Intership and Academic</h1>
           </div>
 
-          <div className = "ExperienceItem">
-            <div className = "icon">
-              <img  clasName = "image" src={DataDistik} alt=""/>
-            </div>
-            <div className = "info">
-              <h1>Scholar internship I (Plenumsoft) 4th quarter</h1>
-              <p>Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.</p>
-            </div>
-          </div>
-
-
-          <div className = "ExperienceItem">
-            <div className = "icon" style = {{height:"40%",}}>
-              <img  clasName = "image" src={Programming} alt=""/>
-
-            </div>
-            <div className = "info" >
-              <h1>Freelancer experience as a teacher in Teams platform since May 2020</h1>
-                <ul>
-                  <li>
-                    <p>Designed and taught four full courses in programing microcontrollers to 
-                        UPY students.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                        Designed and taught two full courses and modular extracurricular class 
-                        in general programing and Data structures in C and Python.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Designed and taught three courses in Real Time operating system 
-                      (ROS) in C++ and Python language to UPY students.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Experience teaching some students of Computational Robotics (7,8 and 
-                      quarter), Embedded System (6 quarter), and Data Engineering (2, 3 quarter).
-                    </p>
-                  </li>
-                </ul>
-            </div>
-          </div>
+          <Note 
+            img={DataDistik} title = {
+              "Scholar internship I (Plenumsoft) 4th quarter"
+            } 
+            text = { 
+                `Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.`
+              }>  
+          </Note>
 
 
 
-          <div className = "ExperienceItem">
-            <div className = "icon">
-              <img  clasName = "image" src={Markovito} alt=""/>
-            </div>
-            <div className = "info">
-              <h1>Intership (INAOE) 10th quarter</h1>
-              <p>
-              Developed robotic software in C++ programming language for a service 
-              robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (Puebla) with the purpose of doing future 
-              research in this robotic field.
-              </p>
-            </div>
-          </div>
+          <Note img =  {Markovito} title = {"Intership (INAOE) 10th quarter"} text = { 
+              "Developed robotic software in C++ programming language for a service robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (Puebla) with the purpose of doing future research in this robotic field."
+            }>
+          </Note>
+
+
+          <Note img={Micro} title = {"Matrix keyboard library for PSoC-5lp"} text = { 
+              "This PSoC 5 library allows you to read the matrix keyboard reading just digits ('1', 'A', etc) or a combination of digits ('1997', 'A10B'). This library is a summary function to read a simple Matrix Keyboard 4x4. This allows you to create your PSoC projects without taking care of the low programming logic of reading the buttons of the keyboard."
+            }>  
+          </Note>
+
+
+          <Note 
+            img={Tiago} title = {
+              "Distance and Angular control in x axis for a Mobile Robot in ROS"
+            } 
+            text = { 
+                `A brief code with a control with odometry message. In this project you will found a rospackage in charge of the control distance that can move a mobile robot according with a /odom topic in the mobile robot. You just change the subscriber topic "/odom" by a topic that your robot has e.g. "/mobile_base/odom".`
+              }>  
+          </Note>
+
+          <Note 
+            img={Motor} title = {
+              "Low level PID controller example in DC motor with PSoC 5"
+            } 
+            text = { 
+                `The following example presents the implementation of a low-level PID controller to control the angular position of a dc motor.`
+              }>  
+          </Note>
+
+          <Note 
+            img={Car} title = {
+              "Counter and car tracker on road application"
+            } 
+            text = { 
+                `This application detect a car on road using principies of artificial and send the current count number to and application.`
+              }>  
+          </Note>
+
+
 
 
         </div>
 
 
-        <div className =  ""></div>
+        
 
       </section>
 
