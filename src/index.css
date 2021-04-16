@@ -356,7 +356,7 @@ h1{
 }
 
 .ExperienceContainer{
-  border: 1px solid rgb(243, 4, 56);
+  /* border: 1px solid rgb(243, 4, 56); aquiii*/
   height: 4500px;
   width: 100%;
   flex-wrap: wrap;

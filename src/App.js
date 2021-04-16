@@ -264,14 +264,17 @@ function App() {
 
 
           <Note img =  {Markovito} title = {"Intership (INAOE) 10th quarter"} text = { 
-              "Developed robotic software in C++ programming language for a service robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (Puebla) with the purpose of doing future research in this robotic field."
+              "Developed robotic software in C++ programming language for a service robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE) with the purpose of doing future research in this robotic field."
             }>
           </Note>
 
-
-          <Note img={Micro} title = {"Matrix keyboard library for PSoC-5lp"} text = { 
-              "This PSoC 5 library allows you to read the matrix keyboard reading just digits ('1', 'A', etc) or a combination of digits ('1997', 'A10B'). This library is a summary function to read a simple Matrix Keyboard 4x4. This allows you to create your PSoC projects without taking care of the low programming logic of reading the buttons of the keyboard."
-            }>  
+          <Note 
+            img={Car} title = {
+              "Counter and car tracker on road application"
+            } 
+            text = { 
+                `This application detects cars on road using principles of artificial vision and sends the current count number to and application.`
+              }>  
           </Note>
 
 
@@ -280,7 +283,7 @@ function App() {
               "Distance and Angular control in x axis for a Mobile Robot in ROS"
             } 
             text = { 
-                `A brief code with a control with odometry message. In this project you will found a rospackage in charge of the control distance that can move a mobile robot according with a /odom topic in the mobile robot. You just change the subscriber topic "/odom" by a topic that your robot has e.g. "/mobile_base/odom".`
+                `Distance and Angular control for a mobile robot (Tiago) using odometry according with a /odom topic published on ROS.`
               }>  
           </Note>
 
@@ -293,14 +296,13 @@ function App() {
               }>  
           </Note>
 
-          <Note 
-            img={Car} title = {
-              "Counter and car tracker on road application"
-            } 
-            text = { 
-                `This application detect a car on road using principies of artificial and send the current count number to and application.`
-              }>  
+
+          <Note img={Micro} title = {"Matrix keyboard library for PSoC-5lp"} text = { 
+              "This PSoC 5 library allows you to read the matrix keyboard reading just digits ('1', 'A', etc) or a combination of digits ('1997', 'A10B'). This library is a summary function to read a simple Matrix Keyboard 4x4. This allows you to create your PSoC projects without taking care of the low programming logic of reading the buttons of the keyboard."
+            }>  
           </Note>
+
+
 
 
 
