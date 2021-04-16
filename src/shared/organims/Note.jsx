@@ -19,6 +19,7 @@ const iconSectionStyle = {
         transition: "all 0.3s ease-in-out",
         flexShrink: "0",
         marginRight: "40px",
+        zIndex: "1"
 }
 
 const infoSectionStyle = {
