@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { Button, DatePicker, version } from "antd";
+import 'antd/dist/antd.css';
+
 
 
 const ModalStyle = {
@@ -22,12 +25,13 @@ const ModalStyle = {
 const videoStyle = {
         float: "left",
         paddingLeft: "40px",
-        paddingTop: "180px",
+        paddingTop: "130px",
         paddingRight: "10px",
+
 }
 
 
-const Modal  = ({open, onClose, title, video, children})=>{
+const Modal  = ({open, onClose, title, video, children} )=>{
         if(!open){
                 return null;
         }
@@ -36,7 +40,11 @@ const Modal  = ({open, onClose, title, video, children})=>{
 
                         <>
                         <div style= {ModalStyle}>
-                                <iframe  style = {videoStyle } width="560" height="315" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <Button onClick = {onClose}  type="primary" style={{ marginLeft: 8, float: "right" }}>
+                                Close
+                        </Button>
+
+                                <iframe  style = {videoStyle } width="560" height="515" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 <h1>{title}</h1>
                                 <br/>
                                 <p>{children}</p>
@@ -46,6 +54,7 @@ const Modal  = ({open, onClose, title, video, children})=>{
                         document.getElementById("portal")
                 )
         }
+
         return (
 
                 <div style= {ModalStyle}>
