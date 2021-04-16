@@ -27,11 +27,17 @@ const infoSectionStyle = {
 }
 
 
-const Note = ( {img, title, text} ) => {
+const Note = ( {callback, onClick,  img, title, text, video } ) => {
+
+        //Here declare your function//
+        const executeCallback = ()=>{
+                callback(true); //Execute the callback
+                return true;
+        }
         return (
                 // <div style = {NoteStyle} className = ".NoteStyle"  >
                 //Because I need a hover
-                <div className = "NoteStyle"  > 
+                <div className = "NoteStyle" onClick = {executeCallback}  > 
                         <div style = { { display:"flex", }  }>
                                 
                                 <img style = {iconSectionStyle}  src={img} alt=""/>
@@ -43,6 +49,7 @@ const Note = ( {img, title, text} ) => {
                                 </div>
                         </div>
                 </div>
+
         )
 }
 export default Note;
