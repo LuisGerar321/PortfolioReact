@@ -1,7 +1,7 @@
 import './App.css';
 
 
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom'
 
 import myPhoto from "./UserPhoto.jpg";
@@ -14,13 +14,15 @@ import ProgLevel from "./ProgSkills.PNG";
 import Markovito from "./MarkovitoJr.jpg";
 import DataDistik from "./DataDistik.png";
 import Programming from "./ProgrammingIllustration.png"
-import Note from "./shared/organims/Note"
+
 import Micro from "./Micro.jpg"
 import Tiago from "./tiago.jpg"
 import Motor from "./ControlMotor.JPG"
 import Car from "./carCounterHD.JPG"
 
 import Barra from  "./shared/organims/Barra";
+import Note from "./shared/organims/Note";
+import Modal from "./shared/organims/Modal.jsx"
 import { Anchor } from 'antd';
 
 
@@ -33,6 +35,8 @@ function App() {
   const title_ =  "Luis Gerardo";
   const name =  "Luis Gerardo";
   const lastNAme = "Camara Salinas";
+
+  const  [isOpen, setIsOpen] = useState(false)
 
   const btnHome = {
     border: "none",
@@ -60,6 +64,7 @@ function App() {
     {tag:  "HTML",  value : 30,   },
     {tag:  "C#",  value : 20,   },
   ]
+
 
 
   return (
@@ -258,15 +263,26 @@ function App() {
             } 
             text = { 
                 `Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.`
-              }>  
+              }
+
+            
+          >
+
+          
+            
+              
           </Note>
 
 
 
-          <Note img =  {Markovito} title = {"Intership (INAOE) 10th quarter"} text = { 
+          <Note onClick = {() =>  {setIsOpen(true)} } img =  {Markovito} title = {"Intership III (INAOE) 10th quarter"} text = { 
               "Developed robotic software in C++ programming language for a service robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE) with the purpose of doing future research in this robotic field."
-            }>
+            } 
+            >
           </Note>
+          
+
+          <Modal video = {"https://www.youtube.com/watch?v=Wy1KM_N_SP4"} title = {"Markovito"} open = {isOpen} ></Modal>
 
           <Note 
             img={Car} title = {
@@ -303,7 +319,7 @@ function App() {
           </Note>
 
 
-
+          
 
 
 
@@ -313,8 +329,8 @@ function App() {
         
 
       </section>
-
-
+      
+      
     </div>
     
   );

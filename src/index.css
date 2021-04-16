@@ -437,6 +437,7 @@ img {
   border-radius: 1rem;
   box-shadow: 0px 4px 8px rgba(168, 173, 173, 0.322);
   transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .NoteStyle:hover  {
