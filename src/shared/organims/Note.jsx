@@ -27,11 +27,11 @@ const infoSectionStyle = {
 }
 
 
-const Note = ( {callback, onClick,  img, title, text, video } ) => {
+const Note = ( {callback, onClick,  img, title, text, video, modal } ) => {
 
         //Here declare your function//
         const executeCallback = ()=>{
-                callback(true); //Execute the callback
+                callback(true, modal); //Execute the callback
                 return true;
         }
         return (
