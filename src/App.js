@@ -15,6 +15,10 @@ import Markovito from "./MarkovitoJr.jpg";
 import DataDistik from "./DataDistik.png";
 import Programming from "./ProgrammingIllustration.png";
 import CounterCar from "./CounterCar.png";
+import DistanceControl from "./Distance_control.jpeg";
+import MotorDcConnections from  "./ControlMotor.JPG";
+import KeyBoard from "./KeyboardMatrix.JPG";
+import DataD from "./Propuesta_proyecto_png.png";
 
 
 import Micro from "./Micro.jpg"
@@ -24,7 +28,11 @@ import Car from "./carCounterHD.JPG"
 
 import Barra from  "./shared/organims/Barra";
 import Note from "./shared/organims/Note";
+
 import Modal from "./shared/organims/Modal.jsx"
+import ModalData from "./shared/organims/ModalData.jsx"
+
+
 import { Anchor } from 'antd';
 const { Link } = Anchor;
 
@@ -41,8 +49,8 @@ function App() {
     Datadistik: {//0 Datadistik
       title: "Scholar internship I (Plenumsoft) 4th quarter",
       video: "Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.",
-      img:  "",
-      body: ""
+      img:  DataD,
+      body: "In this project I work with a software engeneer in Plenunsoft to create a device to recognized numbers using microcontroller and a camera."
     },
     Markovito: {//1 Markovito
       title: "Intership III (INAOE) 10th quarter",
@@ -58,30 +66,42 @@ function App() {
       title: "Counter and car tracker on road application",
       video: null,
       img:  CounterCar,
-      body: "I built this bridge system to conect with my artificial vision app, then I created an api to send information to MongoDB "
+      body: "I built a bridge system to connect a python artificial vision app with an express JS API to show a real time counting in a web page created with Bootstrap studio."
     },
     DistanceAngular_Control: {//3 Distance
-      title: "",
-      video: "",
-      img:  "",
-      body: ""
+      title: "Distance Control node in ROS/C++ language",
+      video: "https://www.youtube.com/embed/-Wortk3iDvE",
+      img:  DistanceControl,
+      body: `PD controller that controls the distance that our robot
+      must move in a straight line, giving it a reference value (setpoint) and validating the current
+      position on the x-axis until reaching the desired distance. Also, this node is cappable to rotate  on its own axis passin a degree angle as a second parameter.`,
     },
     Angular_Control: {//4 Low level Control Example
-      title: "",
-      video: "",
-      img:  "",
-      body: ""
+      title: "Controlador PID-PD Psoc 5",
+      video:"https://www.youtube.com/embed/Nb9wLnDV3SI",
+      img:  MotorDcConnections,
+      body:   "I make a simple PID-PD application for a Microcontroller called Psoc to get practice on it and then use that in a real robot application 'Markovito Jr.'"
     },
-    Psoc: {//5 Low level Control Example
-      title: "",
-      video: "",
-      img:  "",
-      body: ""
+    Psoc: {//5 Library
+      title: "Matrix Keyboard 4x4 library for PSoC 5lp.",
+      video: null,
+      img:  KeyBoard,
+      body: `This PSoC 5 library allows you to read the matrix keyboard reading  digits ('1', 'A', etc) or digits combination ('1997', 'A10B').
+      So, it's summary function to read and write in a easy way your Matrix Keyboard 4x4. Using this library you can create your PSoC projects without taking care of the low programming logic on the keyboard.`
     },
   }
 
 
-  const  [isOpen, setIsOpen] = useState(false)
+  const  [isOpen, setIsOpen] = useState(false);
+  const  [isOpenData, setIsOpenData] = useState(false);
+  const  [isOpenDistance, setIsOpenDistance] = useState(false);
+  const  [isOpenCounter, setIsOpenCounter] = useState(false);
+  const  [isOpenAngular, setIsOpenAngular] = useState(false);
+  const  [isOpenMatrix, setIsOpenMatrix] = useState(false);
+  
+
+
+
   const  [ infoModal, setInfo] =  useState(   {
           title: "",
           video: "",
@@ -117,8 +137,29 @@ function App() {
   ]
 
 
-  const CallbackChangeState =  ( state) =>{
-    setIsOpen(state);
+  const CallbackChangeState =  ( state, element) =>{
+
+    switch(element){
+      case 'Data':
+        setIsOpenData(state);
+        break;
+      case "Markovito":
+        setIsOpen(state);
+        break;
+      case 'Distance':
+        setIsOpenDistance(state);
+        break;
+      case 'Counter':
+        setIsOpenCounter(state);
+        break;
+      case "Angular":
+        setIsOpenAngular(state);
+        break;
+      case "Matrix":
+        setIsOpenMatrix(state);
+        break;
+    }
+    
     return;
   }
 
@@ -319,13 +360,13 @@ function App() {
             text = { 
                 `Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.`
               }
-              callback = {CallbackChangeState}        
+              callback = {CallbackChangeState} modal =   "Data" 
           >
           </Note>
 
 
 
-          <Note callback = {CallbackChangeState} img =  {Markovito} title = {"Intership III (INAOE) 10th quarter"} text = { 
+          <Note callback = {CallbackChangeState} modal = "Markovito" img =  {Markovito} title = {"Intership III (INAOE) 10th quarter"} text = { 
               "Developed robotic software in C++ programming language for a service robot (Markovito Jr.) under supervision of Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE) with the purpose of doing future research in this robotic field."
             } 
             >
@@ -372,9 +413,15 @@ function App() {
           </Note>
 
 
+
+          <ModalData image = {infoStatic.Datadistik.img} title ={infoStatic.Datadistik.title} open = {isOpenData} onClose = { ()=>{setIsOpenData(false)}} >
+            {infoStatic.Datadistik.body}
+          </ModalData>
+
           <Modal video = {infoStatic.Markovito.video} title = {infoStatic.Markovito.title} open = {isOpen} onClose = { ()=>{setIsOpen(false)}} >
             {infoStatic.Markovito.body}
           </Modal>
+
 
 
 
