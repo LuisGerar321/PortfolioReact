@@ -37,9 +37,10 @@ import ModalMotor from "./shared/organims/ModalMotor.jsx"
 import ModalPSoC from "./shared/organims/ModalPSoC.jsx"
 
 
-
+import 'antd/dist/antd.css';
 import { Anchor } from 'antd';
 const { Link } = Anchor;
+
 
 
 
@@ -171,30 +172,33 @@ function App() {
         <h1 className = "name-user"> {title_} </h1>
 
         <Anchor  >
-        <Link   href="#Profile" title="Profile" ></Link>  
+        <Link   href="#Profile" title="Profile" ></Link> 
       
         </Anchor>
 
         <Anchor>
-          <Link  className = "btn-home"  href="#Education" title="Education" />
+          <Link    href="#Education" title="Education" />
         </Anchor>
 
         <Anchor>
-          <Link  className = "btn-home" href="#Languaje" title="Lenguaje" />
+          <Link   href="#Languaje" title="Lenguaje" />
         </Anchor>
 
         <Anchor>
-          <Link  className = "btn-home" href="#skills" title="skills" />
+          <Link   href="#skills" title="skills" />
         </Anchor>
 
 
         <Anchor>
-          <Link  className = "btn-home" href="#ProgrammingLevel" title="ProgrammingLevel" />
+          <Link   href="#ProgrammingLevel" title="ProgrammingLevel" />
         </Anchor>
 
         <Anchor>
-          <Link  className = "btn-home" href="#Experience" title="Experience" />
+          <Link   href="#Experience" title="Experience" />
         </Anchor>
+
+
+
         {/* <a href="#Profile"> <button className  = "btn-home btn1" >Profile</button>    </a>
         
         <button href="#Education" className  = "btn-home btn1" >Education</button>  
@@ -275,20 +279,15 @@ function App() {
         </div>
 
         <div className="GraphContainer">
-          <div  className = "icon">
-                <img src= {EngLevel} className= "photo" />
-          </div>
-
-          <div  className = "icon">
-                <img src= {SpaLevel} className= "photo" />
-          </div>
+          <img src= {EngLevel} className= "iconSectionStyle" />
+          <img src= {SpaLevel} className= "iconSectionStyle" />
 
         </div>
 
 
       </section>
 
-      <section id ="skills " className =  "SkillsContainer">
+      <section id ="skills " >
         <div className = "TagLeftandRow">
           <div className =  "TagBar"><h1>Skills</h1>  </div>
           <div className =  "TagBarR"><h1>Interests</h1></div>      

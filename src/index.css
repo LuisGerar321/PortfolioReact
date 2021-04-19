@@ -13,7 +13,7 @@
 
 .menu-box{
   /* position: absolute; */
-  height: 5vh;
+  height: 8vh;
   width:  100vw;
   left: 0;
   top: 0;
@@ -27,6 +27,7 @@
   position: fixed;
   object-position: 100;
   border-radius: 0.2rem;
+  z-index: 3000;
 
 }
 
@@ -273,9 +274,7 @@ h1{
 .GraphContainer {
   display: flex;
   align-self: flex-end;
-  justify-content: flex-end;
-  justify-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 
@@ -326,6 +325,7 @@ h1{
   padding: 10px;
   margin: 10px;
   flex-direction: row;
+  float: left;
 }
 .Name {
   justify-self: flex-start;
@@ -341,6 +341,7 @@ h1{
   height: 40px;
   border-radius: 1rem;
   background-color: rgb(207, 207, 207);
+  background-color: rgb(165, 161, 161);
   margin: 20px;
   display: flex;
 
@@ -442,4 +443,16 @@ img {
 
 .NoteStyle:hover  {
   transform: scale(1.01)
+}
+
+.iconSectionStyle  {
+  margin: 20px;
+  width: 20%;
+  height: 20%;
+  background-color: rgba(82, 131, 221, 0.144);
+  border-radius: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  margin-right: 40px;
+  z-index: 1;
 }
