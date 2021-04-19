@@ -77,7 +77,7 @@ function App() {
       body: `PD controller that controls the distance that our robot must move in a straight line, The program uses a reference value (setpoint) and the current position on the x-axis to start moving the robot until reaching the desired distance with the minimum error in centimeters. Also, this node is capable to rotate on its own axis passing another argument that represents the degree angle desired.`,
     },
     Angular_Control: {//4 Low level Control Example
-      title: "Controlador PID-PD Psoc 5",
+      title: "PID-PD Controller Psoc 5",
       video:"https://www.youtube.com/embed/Nb9wLnDV3SI",
       img:  MotorDcConnections,
       body:   "I made a simple PID-PD program in C language for a Microcontroller called PSoC to got experience on this kind of application and to then use that in a real robot application 'Markovito Jr. As you can see, the motor is cheap so I could not be as strict as I would want in order to get a perfectly steady-state error."
