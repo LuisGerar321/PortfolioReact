@@ -31,6 +31,11 @@ import Note from "./shared/organims/Note";
 
 import Modal from "./shared/organims/Modal.jsx"
 import ModalData from "./shared/organims/ModalData.jsx"
+import ModalCounter from "./shared/organims/ModalCounter.jsx"
+import ModalDistance from "./shared/organims/ModalDistance.jsx"
+import ModalMotor from "./shared/organims/ModalMotor.jsx"
+import ModalPSoC from "./shared/organims/ModalPSoC.jsx"
+
 
 
 import { Anchor } from 'antd';
@@ -50,44 +55,37 @@ function App() {
       title: "Scholar internship I (Plenumsoft) 4th quarter",
       video: "Identified of digits in images using machine learning algorithms and microcontrollers at Datadistik.",
       img:  DataD,
-      body: "In this project I work with a software engeneer in Plenunsoft to create a device to recognized numbers using microcontroller and a camera."
+      body: "In this project, I worked with a software engineer in the Plenunsoft company to create a device that was able to recognized numbers using a microcontroller and a WebCam."
     },
     Markovito: {//1 Markovito
       title: "Intership III (INAOE) 10th quarter",
       video: "https://www.youtube.com/embed/Wy1KM_N_SP4",
       img:  "",
-      body: `This Section shows an implementation of a basic C++ module in charge of moving the torso and
-          face of Markovito Jr. and how these basic modules help solve tasks in the area of service
-          robotics. In addition, we will talk about the software architecture that is being implemented
-          in Markovito Jr. that through a task curtain communicates to call different basic modules
-          and perform tasks.`
+      body: `This Section shows an implementation of a basic C++ module in charge of moving the torso and face of a service robot and how these basic modules help solve tasks in the area of service robotics. Besides, the most recent tools in robotics and software architecture were used in order to communicate with the robot.`
     },
     Counter_track: {//2 Counter track
-      title: "Counter and car tracker on road application",
+      title: "Counter and car tracker on road app",
       video: null,
       img:  CounterCar,
-      body: "I built a bridge system to connect a python artificial vision app with an express JS API to show a real time counting in a web page created with Bootstrap studio."
+      body: "I built a bridge system to connect a python artificial vision app with an express JS API to show real-time counting of cars on a webpage created with Bootstrap studio and others tools."
     },
     DistanceAngular_Control: {//3 Distance
       title: "Distance Control node in ROS/C++ language",
       video: "https://www.youtube.com/embed/-Wortk3iDvE",
       img:  DistanceControl,
-      body: `PD controller that controls the distance that our robot
-      must move in a straight line, giving it a reference value (setpoint) and validating the current
-      position on the x-axis until reaching the desired distance. Also, this node is cappable to rotate  on its own axis passin a degree angle as a second parameter.`,
+      body: `PD controller that controls the distance that our robot must move in a straight line, The program uses a reference value (setpoint) and the current position on the x-axis to start moving the robot until reaching the desired distance with the minimum error in centimeters. Also, this node is capable to rotate on its own axis passing another argument that represents the degree angle desired.`,
     },
     Angular_Control: {//4 Low level Control Example
       title: "Controlador PID-PD Psoc 5",
       video:"https://www.youtube.com/embed/Nb9wLnDV3SI",
       img:  MotorDcConnections,
-      body:   "I make a simple PID-PD application for a Microcontroller called Psoc to get practice on it and then use that in a real robot application 'Markovito Jr.'"
+      body:   "I made a simple PID-PD program in C language for a Microcontroller called PSoC to got experience on this kind of application and to then use that in a real robot application 'Markovito Jr. As you can see, the motor is cheap so I could not be as strict as I would want in order to get a perfectly steady-state error."
     },
     Psoc: {//5 Library
       title: "Matrix Keyboard 4x4 library for PSoC 5lp.",
       video: null,
       img:  KeyBoard,
-      body: `This PSoC 5 library allows you to read the matrix keyboard reading  digits ('1', 'A', etc) or digits combination ('1997', 'A10B').
-      So, it's summary function to read and write in a easy way your Matrix Keyboard 4x4. Using this library you can create your PSoC projects without taking care of the low programming logic on the keyboard.`
+      body: `This PSoC 5 library allows you to read the matrix keyboard reading  digits ('1', 'A', etc) or a digits combination ('1997', 'A10B'). So, it's a set of functions to read/write in an easy way on your Matrix Keyboard 4x4. Using this library you can create your PSoC projects without taking care of the low programming logic on the keyboard.`
     },
   }
 
@@ -383,7 +381,7 @@ function App() {
                 `This application detects cars on road using principles of artificial vision and sends the current count number to and application.`
               }
               
-              callback = {CallbackChangeState}>  
+              callback = {CallbackChangeState} modal = "Counter"   >  
             
           </Note>
 
@@ -394,7 +392,7 @@ function App() {
             } 
             text = { 
                 `Distance and Angular control for a mobile robot (Tiago) using odometry according with a /odom topic published on ROS.`
-              } callback = {CallbackChangeState}>  
+              } callback = {CallbackChangeState} modal ="Distance">  
           </Note>
 
           <Note 
@@ -403,15 +401,21 @@ function App() {
             } 
             text = { 
                 `The following example presents the implementation of a low-level PID controller to control the angular position of a dc motor.`
-              } callback = {CallbackChangeState}>  
+              } callback = {CallbackChangeState} modal = { "Angular"   }>  
           </Note>
-
 
           <Note img={Micro} title = {"Matrix keyboard library for PSoC-5lp"} text = { 
               "This PSoC 5 library allows you to read the matrix keyboard reading just digits ('1', 'A', etc) or a combination of digits ('1997', 'A10B'). This library is a summary function to read a simple Matrix Keyboard 4x4. This allows you to create your PSoC projects without taking care of the low programming logic of reading the buttons of the keyboard."
-            } callback = {CallbackChangeState} >  
+            } callback = {CallbackChangeState} modal = {"Matrix"} >  
           </Note>
 
+{/* 
+          const  [isOpen, setIsOpen] = useState(false);
+  const  [isOpenData, setIsOpenData] = useState(false);
+  const  [isOpenDistance, setIsOpenDistance] = useState(false);
+  const  [isOpenCounter, setIsOpenCounter] = useState(false);
+  const  [isOpenAngular, setIsOpenAngular] = useState(false);
+  const  [isOpenMatrix, setIsOpenMatrix] = useState(false); */}
 
 
           <ModalData image = {infoStatic.Datadistik.img} title ={infoStatic.Datadistik.title} open = {isOpenData} onClose = { ()=>{setIsOpenData(false)}} >
@@ -423,7 +427,22 @@ function App() {
           </Modal>
 
 
+          <ModalCounter image = {infoStatic.Counter_track.img} title ={infoStatic.Counter_track.title} open = {isOpenCounter} onClose = { ()=>{setIsOpenCounter(false)}} >
+            {infoStatic.Counter_track.body}
+          </ModalCounter>
 
+          <ModalDistance video = {infoStatic.DistanceAngular_Control.video} title = {infoStatic.DistanceAngular_Control.title} open = {isOpenDistance} onClose = { ()=>{setIsOpenDistance(false)}} >
+            {infoStatic.DistanceAngular_Control.body}
+          </ModalDistance> 
+          
+         
+          <ModalMotor video = {infoStatic.Angular_Control.video} title = {infoStatic.Angular_Control.title} open = {isOpenAngular} onClose = { ()=>{setIsOpenAngular(false)}} >
+            {infoStatic.Angular_Control.body}
+          </ModalMotor>
+
+          <ModalPSoC image = {infoStatic.Psoc.img} title ={infoStatic.Psoc.title} open = {isOpenMatrix} onClose = { ()=>{setIsOpenMatrix(false)}} >
+            {infoStatic.Psoc.body}
+          </ModalPSoC>
 
         </div>
 
