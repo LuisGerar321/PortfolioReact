@@ -287,12 +287,11 @@ function App() {
 
       </section>
 
+      <div className =  "TagBar"><h1>{"Skills && Interests"}</h1>  </div>
       <section id ="skills " className =  "SkillsContainer">
+        
         <div className = "TagLeftandRow">
-          <div className =  "TagBar"><h1>Skills</h1>  </div>
-          <div className =  "TagBarR"><h1>Interests</h1></div>      
-        </div>
-        <div className = "TagLeftandRow"> 
+          <div className =  "TagBar2"><h1>Skills</h1>  </div>
           <ul>
             <li>Dedicate</li>
             <li>Responsable</li>
@@ -303,7 +302,11 @@ function App() {
             <li>Effective communication</li>
             <li>Conflict management</li>
           </ul>
-          
+                
+        </div>
+        <div className = "TagLeftandRow"> 
+
+        <div className =  "TagBarR2"><h1>Interests</h1></div>
           <ul>
             <li>Apps development </li>
             <li>Data science </li>
